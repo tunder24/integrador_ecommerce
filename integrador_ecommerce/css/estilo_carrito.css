@@ -1,0 +1,215 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+   
+    text-align: center;
+    padding: 10px;
+}
+
+header a {
+    padding-right: 40px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+h1{
+    color: #364e71;
+}
+ h2 {
+    color: black;
+ }
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    header h1, header a {
+        font-size: 16px;
+    }
+
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1, header a {
+        font-size: 14px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
+#nom_usuario{
+    margin: 0px;
+    background-color: #4CAF50;
+}
+#nom_usuario h1{
+    margin: 0px;
+    padding-left: 1200px;
+    color: #ddd;
+}
+#volver_inicio h1{
+    margin: 0px;
+
+    color: #ddd;
+
+}
+
+  form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+  p {
+    margin: 10px 0;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  input[type="text"],
+  input[type="month"],
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  input[type="submit"] {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #4cae4c;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+  
+    form {
+      width: calc(100% - 20px);
+    }
+  }
+  
+
+  /*estilo de ficha_producto.php*/
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.ficha-producto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.flex-producto {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flex-producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.flex-producto h3 {
+    color: #333;
+    margin: 10px 0;
+}
+
+.flex-producto p {
+    color: #666;
+}
+
+.flex-producto a {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.flex-producto a:hover {
+    background-color: #45a049;
+}
+
+@media screen and (max-width: 768px) {
+    .flex-producto {
+        width: 90%;
+    }
+}

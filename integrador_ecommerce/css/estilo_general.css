@@ -1,0 +1,704 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Cambiado a una fuente más moderna y legible */
+    font-size: 16px; /* Aumentado para mejor legibilidad */
+    background: #f4f4f4; /* Un fondo más claro para contrastar con el header/footer oscuro */
+    color: #333; /* Color de texto oscuro para mejor contraste */
+    line-height: 1.5; /* Espaciado entre líneas para mejor legibilidad */
+  }
+  
+  /* Enlace global para cohesión con el diseño */
+  a {
+    text-decoration: none;
+    color: #ff6f00; /* Color anaranjado para enlaces */
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: rgb(255, 159, 5); /* Oscurecer un poco al pasar el cursor */
+  }
+  
+  /* Estilo para contenedores principales */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  
+  /*inicio----*/
+  
+  .inicio_index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    background: linear-gradient(45deg, #2b2b2b, #7e7e7e); /* Fondo con degradado */
+  }
+  #dato_usuario {
+   
+    justify-content:center;
+    align-items: center;
+    margin: 0px;
+   display:inline-table;
+  
+  }
+
+  #dato_usuario h2 {
+
+    color: #000000;
+    margin: 0px;
+
+  }
+  #dato_usuario h3 {
+    
+    padding: 0px;
+    margin: 0px;
+    color: #56616c;
+    
+
+
+  }
+  
+  #listados {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los enlaces */
+  }
+  
+  .modern-link {
+    display: inline-block;
+    padding: 15px 30px; /* Más padding horizontal para un mejor aspecto */
+    color: #181818;
+    background-color: rgba(255, 159, 5, 0.8); /* Ligeramente transparente */
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave para los efectos */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  }
+  
+  .modern-link:hover {
+    transform: translateY(-5px); /* Mueve el enlace un poco hacia arriba al pasar el cursor */
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el cursor */
+  }
+  
+  .inicio_index h1 {
+    margin: 0; /* Elimina el margen por defecto */
+    font-size: 1.5rem; /* Tamaño de fuente más adecuado para un enlace */
+  }
+  
+  
+  
+  /*hamburguesa */
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(255, 159, 5);
+  }
+
+  #menu.show {
+    display: block;
+    max-height: 300px; /* Ajusta este valor según la altura máxima que esperas para tu menú */
+      opacity: 1;
+  }
+  .menu-item a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease-out;
+  }
+  .menu-item a:hover {
+    background-color: rgba(255, 159, 5, 0.1); /* Un ligero fondo naranja al pasar el mouse */
+  }
+  
+  /* Estilos responsive */
+  @media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+  
+    #menu {
+        display: none;
+        width: 100%;
+    }
+  
+    .menu-list {
+  
+        width: 300px;
+        flex-direction: column;
+        border-radius: 0;
+    }
+  
+    .menu-item {
+        text-align: left;
+        line-height: 40px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  
+    .menu-item:last-child {
+        border-bottom: none;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* comienzo del header */
+  
+  header {
+    height: 60px;
+    width: 100%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  
+  #menu {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 100px;
+  }
+  
+  .menu-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(#181818, #242222);
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  
+  .menu-item {
+    flex: 1;
+    text-align: center;
+    line-height: 50px;
+  }
+  
+  .menu-item a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 0 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-item a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .menu-list {
+        flex-direction: column;
+        border-radius: 0;
+    }
+  
+    .menu-item {
+        line-height: 40px;
+    }
+  }
+  /* fin del header */
+  
+  
+  /*--------------flex container--------*/
+  
+  .flex-container {
+    padding: 50px;
+    display: flex;
+    overflow-x: auto; /* Habilita el desplazamiento horizontal */
+    scroll-snap-type: x mandatory; /* Habilita el efecto de "snap" en el eje x */
+    scrollbar-width: thin; /* Ajusta el ancho de la barra de desplazamiento */
+    scrollbar-color: rgba(255, 159, 5, 0.5) rgba(0, 0, 0, 0.1); /* Colores personalizados para la barra de desplazamiento */
+  }
+  
+  .flex-item {
+    padding: 30px;
+    flex: 0 0 100px; /* No crecer, no encoger, base en 100px */
+    border: 5px solid black;
+    border-radius: 50px;
+    padding-left: 50px;
+    margin-right: 15px;
+    scroll-snap-align: start; /* Asegura que los elementos se alineen correctamente al desplazarse */
+  }
+  
+  .flex-container a {
+    padding: 5px;
+    color: #181818;
+    background-color: rgb(255, 159, 5);
+    border-radius: 50px;
+    text-decoration: none;
+  }
+  
+  .flex-item img {
+    padding-left: 15px;
+    margin: 0;
+    width: 300px;
+  }
+  
+  .flex-container p {
+    color: rgb(0, 0, 0);
+  }
+  .flex-item:last-child {
+    margin-right: 0px; /* Elimina el margen derecho del último cubo */
+  }
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .flex-container {
+      flex-wrap: nowrap; /* Asegura que los elementos no se envuelvan */
+    }
+    .flex-item {
+      min-width: 100%; /* Cada elemento ocupa el 100% del ancho del contenedor */
+    }
+  }
+  
+    
+    /* fin flex container*/
+    /* Comienzo descripcion producto*/
+   
+  
+    .descripcion_producto  {
+     
+      padding-left: 0px;
+      padding-bottom: 150px;
+      margin: 0px;
+      border: 5px solid black;
+  
+    }
+  .descripcion_producto h1 {
+  
+    margin-top: 0;
+    padding: 15px;
+   
+    color: rgb(0, 0, 0);
+    margin: 0px;
+  
+  
+  }
+  
+  
+  /*----fin descripcion de prodcuto*/
+  
+  /* otras cosas del producto*/
+  
+  #imagen_producto img {
+  
+  width: 150px;
+  padding-left: 150px;
+   
+  
+  }
+  #imagen_producto {
+  
+    padding: 5px;
+  
+  
+  }
+  
+  #imagen_producto h2 {
+  
+    padding-left: 150px;
+    color: aliceblue;
+  
+  }
+  
+  #imagen_producto a {
+  
+    font-size: 20px;
+    padding: 17px;
+    padding-right: 150px;
+    padding-left: 150px;
+    color: #181818;
+    background-color: rgb(255, 159, 5);
+    border-radius: 50px;
+    text-decoration: none;
+  }
+  
+  /*footer ------------*/
+  
+  footer {
+    margin: 0;
+    padding: 50px 0;
+    background-color: rgb(255, 159, 5);
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .footer-description {
+    text-align: center;
+  }
+  
+  .footer-social {
+    text-align: center;
+  }
+  
+  .social-link {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 0.3s;
+  }
+  
+  .social-link:hover {
+    color: #888;
+  }
+  
+  .footer-copyright {
+    text-align: center;
+    color: #888;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .footer-content {
+        gap: 15px;
+    }
+  }
+  
+  /*-------------fin del footer*/
+  
+  
+  /*comienzo tabla /**/
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .estilo-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .estilo-th, .estilo-td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .estilo-th {
+    background-color: #f2f2f2;
+  }
+  
+  .estilo-imagenes-tabla {
+    width: 100px;
+    height: auto;
+  }
+  
+  .estilo-main-a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .efecto-boton-main-a {
+    background-color: #4CAF50;
+    transition: background-color 0.3s;
+  }
+  
+  .efecto-boton-main-a:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 600px) {
+    .estilo-tabla {
+     
+      flex-direction: column;
+      align-items: center; /* Centra los elementos hijos en el eje horizontal */
+    }
+  
+    .estilo-th, .estilo-td {
+      width: 100%; /* Ocupa todo el ancho disponible */
+    }
+  
+    .estilo-th {
+      display: none; /* Oculta los encabezados de la tabla */
+    }
+  
+    .estilo-td {
+      border: none;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      margin: 5px 0; /* Espacio entre las filas/columnas */
+    }
+  
+    .estilo-td:before {
+      flex: 1;
+      content: attr(data-label);
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  
+    .estilo-td:nth-of-type(1):before { content: "Nombre"; }
+    .estilo-td:nth-of-type(2):before { content: "Precio"; }
+    .estilo-td:nth-of-type(3):before { content: "Imagen"; }
+    .estilo-td:nth-of-type(4):before { content: "Comprar"; }
+    .estilo-td:nth-of-type(5):before { content: "Visualizar"; }
+  }
+  
+  /*--------formulario cliente-----*/
+  
+  .formulario_compra {
+  
+    background-color: rgb(160, 149, 149);
+    padding-left: 150px;
+  
+  
+  }
+  .formulario_compra label {
+  
+  padding: 50px;
+  font-size: 20px;
+  
+  
+  }
+  .formulario_compra input {
+    
+    padding: 15px;
+    padding-left: 15px;
+    border-radius: 50px;
+  }
+  .formulario_compra h1 {
+  
+    margin: 0;
+    
+  }
+  
+
+  /* todo lo nuevo*/
+
+  /*comenzamos con el login.php*/
+
+  .login-container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form .form-group {
+    margin-bottom: 15px;
+}
+
+.login-form .form-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.login-form .btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-form .btn:hover {
+    background: #0056b3;
+}
+
+.login-form .register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-form .register-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-form .register-link a:hover {
+    text-decoration: underline;
+}
+
+/* id dato usuario del index------------*/
+
+
+
+
+/*estilo carrito nuevo */
+
+
+h1{
+  color: #364e71;
+}
+h2 {
+  color: black;
+}
+
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: rgb(255, 159, 5);
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+a {
+  color: rgb(255, 159, 5);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  header h1, header a {
+      font-size: 16px;
+  }
+
+  table {
+      width: 100%;
+      font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1, header a {
+      font-size: 14px;
+  }
+
+  table {
+      font-size: 12px;
+  }
+}
+#nom_usuario{
+  margin: 0px;
+  background-color: rgb(255, 159, 5);
+}
+#nom_usuario h1{
+  margin: 0px;
+  padding-left: 1200px;
+  color: #ddd;
+}
+#volver_inicio h1{
+  margin: 0px;
+
+  color: #ddd;
+
+}
+
+form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  text-align: center;
+  color: #333;
+}
+
+p {
+  margin: 10px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+input[type="text"],
+input[type="month"],
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+input[type="submit"] {
+  background-color: rgb(255, 159, 5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(255, 159, 5);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  form {
+    width: calc(100% - 20px);
+  }
+}
+
